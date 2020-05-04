@@ -1,0 +1,123 @@
+<html>
+  <head>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      main {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-wrap: wrap;
+        background-color: #333;
+        min-height: calc(100vh - 80px);
+        margin-top: 80px;
+      }
+
+      header {
+        position: absolute;
+        height: 80px;
+        color: white;
+        background-color: #444;
+        padding: 2px 0;
+        text-align: center;
+        box-shadow: 0px 6px 3px 3px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        top: 0px;
+      }
+
+      .card {
+        box-shadow: 0px 6px 3px 3px rgba(0, 0, 0, 0.1);
+        display: inline-block;
+        margin: 20px;
+      }
+
+      .movie-details {
+        width: 400px;
+      }
+
+      .movie-details figure {
+        width: 100%;
+        margin: 0;
+      }
+
+      .movie-details figure img {
+        width: 100%;
+        object-fit: cover;
+      }
+
+      .container {
+        padding: 10px;
+        border: 1px solid #333;
+        background-color: #444;
+        color: white;
+      }
+
+      .ticket-summary {
+        width: 250px;
+      }
+
+      .ticket-summary dt {
+        color: #ccc;
+        font-size: 1.1rem;
+        font-weight: bold;
+        margin-top: 8px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>Your Ticket Details</h1>
+    </header>
+
+    <main>
+      <section class="card movie-details" aria-label="movie details">
+        <figure>
+          <img src="./img.jpg" alt="" />
+        </figure>
+
+        <div class="container">
+          <h2 style="margin: 6px 0;">Parasite</h2>
+          <p style="text-align: justify;">
+            Greed and class discrimination threaten the newly formed symbiotic
+            relationship between the wealthy Park family and the destitute Kim
+            clan.
+          </p>
+          <p><b>Comedy, Drama</b></p>
+        </div>
+      </section>
+
+      <section
+        class="card ticket-summary"
+        aria-labelledby="ticket-summary-title"
+        aria-describedby="ticket-summary-description"
+      >
+        <div class="container">
+          <h2
+            id="ticket-summary-title"
+            style="margin: 6px 0; text-align: center;"
+          >
+            Ticket Summary
+          </h2>
+          <p id="ticket-summary-description" style="text-align: justify;">
+            Remember to exchange your ticket identifier for the actual ticket as
+            soon as you get to the movie theater.
+          </p>
+          <dl>
+            <dt>Identifier</dt>
+            <dd>123</dd>
+            <dt>Seat</dt>
+            <dd>B-12</dd>
+            <dt>Price</dt>
+            <dd>$ 2,00 USD</dd>
+            <dt>Starts in</dt>
+            <dd>2h 30m</dd>
+          </dl>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
