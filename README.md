@@ -2,13 +2,13 @@
 
 In this article I'm going to teach you how to use the HTML tags `<div>`, `<section>` and `<article>`, and why they can improve your web applications accessibility.
 
-Here you can access all the resources used in the article.
+Here you can access all the [resources used in the article](https://github.com/danmt/html-sections).
 
 ## The Problem
 
 Web applications are built with HTML, even though it isn't a programming language, it has some complexity to deal with. One of the first issues you may encounter is knowing which element to use, what makes this issue even harder is the huge amount of elements available.
 
-When it comes to your page's layout some of the options are; `<div>`, `<section>` and `<article>`. Today you're going to learn how to deal with this issue.
+When it comes to your page's layout some of the options are; `<div>`, `<section>` and `<article>`. Today you're going to learn when you should use each of them.
 
 ## The Solution
 
@@ -17,7 +17,7 @@ First of all is to conceptualize each of the elements I just mentioned. You can 
 > The `<div>` element is often used as a container for other HTML elements to style them with CSS or to perform certain tasks with JavaScript.
 > w3schools.com
 
-Is common to be tempted to use `<div>` with some styles instead of learning about the available elements in HTML5. I have to tell you, if you do that, you're hurting your users. The truth is each element has a specific purpose, you should be using the right one, `<div>` is useful when you want to group some elements and give them some styling, that doesn't mean you should make buttons with `<div>`.
+Is common to be tempted to use `<div>` with some styles instead of learning about the available elements in HTML5. I have to tell you, if you do that, you're hurting your users. The truth is each element has a specific purpose, you should be using the right element, `<div>` is useful when you want to group some elements and give them some styling, that doesn't mean you should make everything with `<div>`.
 
 > The `<section>` tag defines sections in a document, such as chapters, headers, footers, or any other sections of the document.
 > w3school.com
@@ -76,7 +76,7 @@ Now that you are fully aware of the purpose of a `<div>` is time to use it. For 
 </html>
 ```
 
-All you got to do for testing is create a file with the `.html` extension containing what I just gave you and open it with your preferred browser. You'll noticed that the first two have a light gray background. Once again, very simple and easy to follow. Let's jump to the next example.
+All you got to do for testing it yourself is create a file with the `.html` extension containing what I just gave you and open it with your preferred browser. You'll noticed that the first two have a light gray background. Once again, very simple and easy to follow. Let's jump to the next example.
 
 ### Sections are the way to go
 
@@ -214,11 +214,11 @@ The HTML for something like this would look like this:
 
 For now you can ignore the styles, it's just to make it look less ugly, what I want you to pay attention to is the HTML part. Look how I created two sections; one for the movie details and one for the ticket summary. Another important takeaway is how I used aria-label and aria-labelledby, both have the same results but in the movie details I wanted to read "Movie Details" instead of the movie title, in the case of the Ticket Summary it's different because we want to read the same title.
 
-By structuring your HTML document this way, using sections with the proper accessible names, you're not only giving context to the user but you're creating a hierachical view of the landmarks of your application. This makes it easier for Screen Readers to understand your page and as a consequence you get better usability by your disabled users.
+By structuring your HTML document this way, using sections with the proper accessible names, you're not only giving context to the user but you're creating a hierachical view of the landmarks of your application. This makes it easier for Screen Readers to understand your page and as a consequence you get better usability for your disabled users.
 
 ### Articles are useful too
 
-I know that example may have set the bar a little high, for this example I'm doing something simpler. Let's say that this movie theater we are "working" for wants to show possible customers all the available movies. This is where articles shine the most, because let's face it, no matter how many movies they are, all of them will have the same styles.
+I know that example may have set the bar a little high, for this example I'm doing something simpler. Let's say that this movie theater we are "working for" wants to show all the available movies to possible customers. This is where articles shine the most, because let's face it, no matter how many movies they are, all of them will have the same styles.
 
 Let's roll up our sleeves then, create a new html file with this content:
 
@@ -373,11 +373,11 @@ Let's roll up our sleeves then, create a new html file with this content:
 </html>
 ```
 
-Remember to focus on the HTML structure, not the styles. My first impression when I looked at something like this I was like, wow, what's all that aria stuff doing? Today I'm going to make this easier for you.
+Remember to focus on the HTML structure, not the styles. The first time I saw this kind of code I was like, wow, what's all that aria stuff doing? Today I'm going to make this easier for you.
 
 > First of all I have to remind you all these ideas come from the [WAI ARIA Authoring Practice Guide](https://www.w3.org/TR/wai-aria-practices-1.1).
 
-One thing to notice before heading to the code is that a list of movies is a feed. Also, don't reinvent the wheel. The WAI ARIA guid has a very detailed description of how a feed should be implemented having accessibility as a first class citizen. You have to start with `<div>` with `role="feed"`, next you have to work on the articles.
+One thing to notice before heading to the code is that a list of movies is a feed. Also, don't reinvent the wheel. The WAI ARIA guide has a very detailed description of how a feed should be implemented having accessibility as a first class citizen. You have to start with `<div>` with `role="feed"`, next you have to work on the articles.
 
 Setting up the feed container is very simple, what's not so straightforward is the articles themselves. Each of the aria properties has a specific purpose:
 
